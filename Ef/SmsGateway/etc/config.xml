@@ -1,0 +1,15 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+   <default>
+       <ef_sms_gateway_tab>
+           <general>
+               <ef_sms_gateway_enabled>1</ef_sms_gateway_enabled>
+           </general>
+           <api_config_info>
+               <api_user_name>Minara@sme</api_user_name>
+               <api_user_password>@q123456</api_user_password>
+               <api_user_max_tries>3</api_user_max_tries>
+           </api_config_info>
+       </ef_sms_gateway_tab>
+   </default>
+</config>

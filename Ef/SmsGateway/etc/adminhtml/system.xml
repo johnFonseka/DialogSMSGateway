@@ -1,0 +1,48 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+   <system>
+       <tab id="ef_sms_gateway_tab" translate="label" sortOrder="1">
+           <label>SMS Gateway</label>
+       </tab>
+       <section id="ef_sms_gateway_tab" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+           <label>SMS Gateway Configuration</label>
+           <tab>ef_sms_gateway_tab</tab>
+           <resource>Ef_SmsGateway::config</resource>
+           
+           <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+               <label>General</label>
+               <field id="ef_sms_gateway_enabled" translate="label" type="select" showInDefault="1" canRestore="1" showInWebsite="1" showInStore="1">
+                   <label>Enabled</label>
+                   <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+               </field>
+           </group>
+           
+           <group id="api_config_info" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+               <label>API Credentials</label>
+
+               <field id="api_user_name" translate="label" type="text" sortOrder="1" showInDefault="1" canRestore="1" showInWebsite="1" showInStore="1">
+                   <label>API Username</label>
+               </field>
+               <field id="api_user_password" translate="label" type="password" sortOrder="2" showInDefault="1" canRestore="1" showInWebsite="1" showInStore="1">
+                   <label>API Password</label>
+               </field>
+               <field id="api_user_max_tries" translate="label" type="text" sortOrder="3" showInDefault="1" canRestore="1" showInWebsite="1" showInStore="1">
+                   <label>Maximum number of tries</label>
+                   <validate>required-entry integer</validate>
+               </field>
+           </group>
+
+           <group id="send_test_text" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+               <label>Send Test SMS</label>
+
+               <field id="test_mobile_number" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                 <label>Mobile Number</label>
+               </field>
+               <field id="test_sms_send_btn" translate="label" type="button" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                 <label>Send </label>
+               </field>
+           </group>
+
+       </section>
+   </system>
+</config>

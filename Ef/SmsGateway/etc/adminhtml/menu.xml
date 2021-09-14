@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Ef_SmsGateway::sms_gateway"
+             title="SMS Gateway"
+             module="Ef_SmsGateway"
+             sortOrder="9999"
+             parent="Ef_Efutures::ef_efutures"
+             resource="Magento_Customer::manage" />
+
+        <add id="Ef_SmsGateway::index_index"
+             title="All SMS"
+             module="Ef_SmsGateway"
+             sortOrder="0"
+             action="smsgateway/index/index"
+             parent="Ef_SmsGateway::sms_gateway"
+             resource="Magento_Customer::manage" />
+
+        <add id="Ef_SmsGateway::configuration"
+             title="Configurations"
+             module="Ef_SmsGateway"
+             sortOrder="0"
+             action="adminhtml/system_config/edit/ef_sms_gateway_tab/api_config_info"
+             parent="Ef_SmsGateway::sms_gateway"
+             resource="Magento_Customer::manage" />
+    </menu>
+</config>
